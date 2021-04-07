@@ -5,8 +5,7 @@ const navLinks = [];
 const buildTopNavMenu = (sections) => {    
 
   for(let s of sections){
-     let link = `<li><a href="#${s.id}">${s.dataset['title']}</a></li>`;     
-     console.log(link);
+     let link = `<li><a href="#${s.id}">${s.dataset['title']}</a></li>`;        
      navLinks.push(link);
   }
 
