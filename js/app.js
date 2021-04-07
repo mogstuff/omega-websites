@@ -15,3 +15,7 @@ const buildTopNavMenu = (sections) => {
    
 
 buildTopNavMenu(sections);
+
+window.addEventListener('scroll', ()=>{
+  console.log('I have done a scroll!');
+});
