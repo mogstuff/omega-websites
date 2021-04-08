@@ -47,6 +47,8 @@ let topLinks = document.querySelectorAll(".navlink");
 
       cleanActiveLinks();
 
+      cleanActiveSections();
+
       link.classList.add('active-link');
 
       s.classList.add('active-section');
@@ -66,6 +68,15 @@ function cleanActiveLinks(){
     a.classList.remove('active-link');
   }
   
+}
+
+function cleanActiveSections(){
+  let activeSections = document.querySelectorAll("section.active-section");
+
+  for(let s of activeSections){
+      s.classList.remove('active-section');
+  }
+
 }
 
 
