@@ -47,6 +47,8 @@ let topLinks = document.querySelectorAll(".navlink");
 
       cleanActiveLinks();
 
+      toggleMenu();
+
       cleanActiveSections();
 
       link.classList.add('active-link');
@@ -85,6 +87,8 @@ topButton.addEventListener('click', (event) => {
 
   cleanActiveLinks();
 
+  toggleMenu(true);  
+
   header.scrollIntoView({behavior : "smooth", block: "end"});    
 
   for(let s of sections){
@@ -93,3 +97,22 @@ topButton.addEventListener('click', (event) => {
 
 });
 
+
+function toggleMenu(topButton = false){
+ 
+    let navList = document.getElementById("top-nav-list").getElementsByTagName('li');
+
+    if(topButton){
+
+        for(let n of navList){
+          n.classList.remove('responsive');
+        }
+
+        return;
+    }
+
+    for(let n of navList){
+      n.classList.toggle('responsive');
+    }
+ 
+}

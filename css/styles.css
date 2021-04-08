@@ -32,12 +32,26 @@ body{
   margin: 0;
 }
 
+.hamburger-menu{
+  color: white;
+  border:1px solid black;
+}
 
+h1{
+  text-align: center;
+}
 
+main{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 .content{
   height:100vh;
-  
+  max-width: 80vw; 
+
 }
 
 .navlink{
@@ -75,9 +89,37 @@ body{
 }
 
 @media (max-width : 815px){
-  #top-nav-list{
+
+  .icon {  
+    position: fixed;
+    background-color: black;
+    z-index: 99;
+  }
+
+  #top-nav-list{   
    flex-direction: column;
    justify-content: left;
    align-items: flex-start;
+  
   }
+
+  nav ul li {
+    display: none;
+  }
+
+  nav ul li.responsive {
+    display: block;
+    margin-left:3rem;
+  }
+
+  nav ul li.responsive:hover {
+    background-color: slategray;
+  }
+
+  .active-section{
+    border:1px solid red; 
+   
+  }
+ 
+
 }
