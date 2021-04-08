@@ -6,17 +6,52 @@
   box-sizing: border-box;
 }
 
+html{
+  margin:0;
+}
 
 body{
   font-family: 'Montserrat', sans-serif;
+  margin:0;
+  display:grid;
 }
+
+#header{
+  margin-top:100px;
+}
+
+#top-nav-list{
+  position: fixed;
+  top:0;
+  display: flex;
+  justify-content:space-evenly;
+  align-items: center;  
+  width:100vw;
+  background-color: black;
+  padding:1rem;
+  margin: 0;
+}
+
+
+
 
 .content{
   height:100vh;
+  
+}
+
+.navlink{
+  color:white;
+  text-decoration: none;
+}
+
+.active-link{
+  background-color: red;
 }
 
 .active-section{
-  border:1px solid red;
+  border:1px solid red; 
+  padding-top:10vh;
 }
 
 #top-btn-wrapper{
@@ -39,3 +74,10 @@ body{
   display:none;
 }
 
+@media (max-width : 815px){
+  #top-nav-list{
+   flex-direction: column;
+   justify-content: left;
+   align-items: flex-start;
+  }
+}

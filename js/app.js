@@ -34,7 +34,9 @@ const addLinkEvents = () => {
 let topLinks = document.querySelectorAll(".navlink");
 
   for(let t of topLinks){
-    let link = document.getElementById(t.id);
+
+    let link = document.getElementById(t.id);    
+
     link.addEventListener('click', (event) => {
       
       event.preventDefault();
@@ -43,9 +45,13 @@ let topLinks = document.querySelectorAll(".navlink");
 
       let s = document.getElementById(sectionId);    
 
+      cleanActiveLinks();
+
+      link.classList.add('active-link');
+
       s.classList.add('active-section');
 
-      s.scrollIntoView({behavior : "smooth"});     
+      s.scrollIntoView({behavior : "smooth", block: "start"});     
 
     });
   }
@@ -53,10 +59,22 @@ let topLinks = document.querySelectorAll(".navlink");
 
 addLinkEvents(navLinks);
 
+function cleanActiveLinks(){
+  let activeLinks = document.querySelectorAll("a.active-link");
+  
+  for(let a of activeLinks){
+    a.classList.remove('active-link');
+  }
+  
+}
+
 
 topButton.addEventListener('click', (event) => {
   event.preventDefault();  
-  header.scrollIntoView({behavior : "smooth"});  
+
+  cleanActiveLinks();
+
+  header.scrollIntoView({behavior : "smooth", block: "end"});    
 
   for(let s of sections){
     s.classList.remove('active-section');
