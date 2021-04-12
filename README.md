@@ -47,7 +47,7 @@ Video by <a href="https://pixabay.com/users/videoplasty-19751245/?utm_source=lin
 
 ### Image Credits
 
-STRESS HEAD = Photo by <a href="https://unsplash.com/@officestock?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Sebastian Herrmann</a> on <a href="https://unsplash.com/@officestock?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+Stress Head = Photo by <a href="https://unsplash.com/@officestock?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Sebastian Herrmann</a> on <a href="https://unsplash.com/@officestock?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
   
 zen 1 = Image by <a href="https://pixabay.com/users/pexels-2286921/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1851165">Pexels</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1851165">Pixabay</a>  
   
