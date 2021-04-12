@@ -1,7 +1,11 @@
 # Landing Page Project - Omega Websites
  Udacity Front End Web Developer Nanodegree Program 
-
-Specifications for the project can be found here https://review.udacity.com/#!/rubrics/2658/view
+ 
+ Specifications for the project can be found here https://review.udacity.com/#!/rubrics/2658/view
+ 
+ ## Deployment
+ 
+ The project has been deployed via Netlify.com and can be view online here: https://happy-bell-1e9ebc.netlify.app/
 
 ## Architecture
 
