@@ -1,22 +1,12 @@
-const header = document.querySelector('header');
+// global variables
+const header = document.getElementById('topNav'); 
 const topNavList = document.getElementById('top-nav-list');
 const navLinks = [];
 const sections = document.querySelectorAll('.content');
 const topButton = document.getElementById('top-button');
 
-
-window.addEventListener('scroll', ()=> {
-   
-    if(window.pageYOffset < 300){
-      topButton.classList.add('hide');
-    }else{
-      topButton.classList.remove('hide');
-    }
-
- });
-
-
-const buildTopNavMenu = (sections) => {    
+// build top nav menu dynamically
+const buildTopNavMenu = (sections) => {     
 
   for(let s of sections){
      let link = `<li><a href="#${s.id}" id="nav-link-${s.id}" class="navlink">${s.dataset['title']}</a></li>`; 
@@ -28,7 +18,9 @@ const buildTopNavMenu = (sections) => {
 
 buildTopNavMenu(sections);
 
-
+// add click events to each link in top nav
+// highlight currently active section in nav menu
+// scroll active section into view
 const addLinkEvents = () => {
  
 let topLinks = document.querySelectorAll(".navlink");
@@ -63,6 +55,8 @@ let topLinks = document.querySelectorAll(".navlink");
 
 addLinkEvents(navLinks);
 
+
+// reset css classes for menu links
 function cleanActiveLinks(){
   let activeLinks = document.querySelectorAll("a.active-link");
   
@@ -72,6 +66,7 @@ function cleanActiveLinks(){
   
 }
 
+// reset active section styling
 function cleanActiveSections(){
   let activeSections = document.querySelectorAll("section.active-section");
 
@@ -82,6 +77,18 @@ function cleanActiveSections(){
 }
 
 
+// show/hide Top button depending on scrollbar position
+window.addEventListener('scroll', ()=> {
+   
+  if(window.pageYOffset < 300){
+    topButton.classList.add('hide');
+  }else{
+    topButton.classList.remove('hide');
+  }
+
+});
+
+// when top button is clicked css on top nav is reset and scroll bar returns to top of page
 topButton.addEventListener('click', (event) => {
   event.preventDefault();  
 
@@ -97,7 +104,7 @@ topButton.addEventListener('click', (event) => {
 
 });
 
-
+// responsive hamburger menu code to toggle visibility of menu items
 function toggleMenu(topButton = false){
  
     let navList = document.getElementById("top-nav-list").getElementsByTagName('li');

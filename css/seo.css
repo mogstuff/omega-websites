@@ -1,0 +1,41 @@
+
+
+.seo-img1{
+  shape-outside: ellipse(100px 200px at 50% 50%);
+  clip-path: ellipse(100px 200px at 50% 50%);
+  width: 400px;
+  height: 300px;
+  float: left;
+    background-image: url('/images/seo-1.jpg');
+  background-size: cover;
+  margin: 0 125px 15px 10px;
+}
+
+.seo-img2{
+  shape-outside: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);;
+  clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
+  width: 300px;
+  height: 300px;
+  float: right;
+    background-image: url('/images/seo-2.jpg');
+  background-size: cover;
+  margin: 0 125px 15px 50px;
+}
+
+
+@media (max-width : 815px){
+  .seo-img1{
+    width:100px;
+    height:100px;
+    margin:1rem;
+    
+  }
+
+  .seo-img2{
+    width:100px;
+    height:100px;
+    margin:auto;
+  }
+
+
+}

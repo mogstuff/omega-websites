@@ -1,0 +1,35 @@
+.ecom1{
+  shape-outside: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);;
+  clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
+  width: 340px;
+  height: 300px;
+  float: right;
+    background-image: url('/images/ecom1.jpg');
+  background-size: cover;
+  margin: 0 125px 15px 50px;
+}
+
+.ecom2{
+  shape-outside: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+  clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+  width: 340px;
+  height: 300px;
+  float: left;
+    background-image: url('/images/ecom2.jpg');
+  background-size: cover;
+  margin: 0 125px 15px 50px;
+}
+
+
+@media (max-width : 815px){
+  .ecom1{
+    width: 140px;
+    height: 100px;
+  }
+
+  .ecom2{
+    width: 140px;
+    height: 100px;
+  }
+
+}

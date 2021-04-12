@@ -1,6 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+@import url("topnav.css");
+@import url("services.css");
+@import url("webdesign.css");
+@import url("seo.css");
+@import url("ecommerce.css");
+@import url("aboutus.css");
+@import url("pricing.css");
+@import url("contact.css");
 
-
+:root{
+  --dark-blue :#003b46;
+  --light-blue: #C4DFE6;
+  --orange: orange;
+}
 
 * {
   box-sizing: border-box;
@@ -8,79 +20,94 @@
 
 html{
   margin:0;
+  padding:0;
 }
 
 body{
   font-family: 'Montserrat', sans-serif;
   margin:0;
+  padding:0;
   display:grid;
-}
-
-#header{
-  margin-top:100px;
-}
-
-nav{
-  z-index:999;
-}
-
-#top-nav-list{
-  position: fixed;
-  top:0;
-  display: flex;
-  justify-content:space-evenly;
-  align-items: center;  
-  width:100vw;
-  background-color: black;
-  padding:1rem;
-  margin: 0;
- 
-
-
-}
-
-.hamburger-menu{
-  color: white;
-  border:1px solid black;
 }
 
 h1{
   text-align: center;
 }
 
+h2{
+  text-align: center; 
+}
+
 main{
   display:flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-
- 
+  align-items: center; 
+  
 }
 
-.content{
-  height:100vh;
-  width:100%;
+
+#header{
+  margin-top: 100px;
+  height: 100vh;
+  z-index: 990;
+}
+
+#header img{
+ display:block;
+ margin-left:20vw;
 
 }
 
-.navlink{
+#header h2{
+  margin-top: 10px;
+  padding:2rem;
+  background: rgba(11, 6, 85, 0.3);
   color:white;
-  text-decoration: none;
+  border-top: 2px solid whitesmoke;
+  border-bottom: 2px solid whitesmoke;
 }
 
-.active-link{
-  background-color: red;
+
+.hide{
+  display:none;
 }
 
-.active-section{
-  border:1px solid red; 
-  padding-top:10vh;
+.content{  
+  height:100vh;
+  width:auto;
+  margin:1rem;
+  padding:1rem;
+  margin-top:2.2rem;
+ background-color: white;
+ z-index:990;
+
+}
+
+
+@keyframes example {
+  from {opacity: 0.1; height:0px;width:0%;}
+  to {opacity: 9; height:100vh; width:80%;}
+}
+
+
+.active-section{ 
+  margin-top: 100px;
+  padding-top:12vh;
+  height:100vh;
+  background-color: white;
+  z-index:995;
+  box-shadow: 10px 10px 5px grey;
+  animation-name: example;
+  animation-duration: 4s;
+
 }
 
 #top-btn-wrapper{
   position:fixed;
   bottom:1rem;
   right:1rem;
+  z-index: 999;
 }
 
 #top-button{
@@ -91,112 +118,65 @@ main{
   filter: drop-shadow(5px 5px 4px #444);
   color:white;  
   font-size:100%;
+  
 }
 
-.hide{
-  display:none;
+#bgvideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
 }
 
-#intro{
-  background-image: url('https://i.postimg.cc/XJkC9rFf/domenico-loia-h-GV2-Tf-Oh0ns-unsplash.jpg');
-  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
-  background-size: cover;
 
+
+.header-content-wrapper{
+  display:flex;
+  justify-content: space-evenly;
+  flex-flow:row;
+  margin:5px;
 }
 
-#web-design{
-  background-image: url("https://i.postimg.cc/nL77cRhw/web-design-1.jpg");
-  clip-path: polygon(50% 0%, 100% 0, 100% 99%, 18% 100%, 0% 38%);
-  background-size: cover;
+#seovideo{
+  width:100%;
+  height:auto;
+  margin:5px;
+  padding:0.25rem;
 }
 
-#seo{
-  background-image: url("https://i.postimg.cc/vTSDvfmV/seo-1.jpg");
-  clip-path: polygon(1% 1%, 100% 0%, 100% 100%, 57% 64%, 0% 50%);
-  background-size: cover;
+.header-content{
+  width:100%;
+  flex-grow: 1;
+  background: rgba(240, 240, 241, 0.7);
+  margin:5px;
+  padding:0.25rem;
+  line-height: 1.8rem;
 }
 
-#ecommerce{
-  background-image: url("https://i.postimg.cc/DfCWFkcw/ecommerce-1.jpg");
-  clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
-  background-size: cover;
+.header-content h2{
+  background: rgba(240, 240, 241, 0.1);
+  font-size:small;
+  padding:0.5rem;
 }
-
-#about{
-  background-image: url("https://i.postimg.cc/PqnS6C3L/pexels-fauxels-3182773.jpg");
-  background-size: cover;
-}
-
-#contact{
-  background-image: url("https://i.postimg.cc/rpLsg8qQ/lets-talk-1.jpg");
-  background-size: cover;
-}
-
 
 @media (max-width : 815px){
 
-  .icon {  
-    position: fixed;
-    background-color: black;
-    z-index: 99;
+  body{
+    font-size:smaller;
+    max-width:100%;
   }
 
-  #top-nav-list{   
-   flex-direction: column;
-   justify-content: left;
-   align-items: flex-start;
-  
+  #header{
+    max-width:100%;    
   }
 
-  nav ul li {
-    display: none;
-  }
-
-  nav ul li.responsive {
-    display: block;
-    margin-left:3rem;
-  }
-
-  nav ul li.responsive:hover {
-    background-color: slategray;
-  }
-
-  .active-section{
-    border:1px solid red; 
-   
-  }
+ }
  
 
+.fullwidth{
+ width: 80%
 }
 
 
 
-
-#pricing {
-  display: flex;
-  flex-direction: row;
-}
-
-.pricing-table {
-  border: 0px solid var(--dark-blue);
-  width: 33%;
-  margin: 1em;
-  text-align: center;
-}
-
-.pricing-table li {
-  list-style-type: none;
-  border: 1px solid var(--dark-blue);
-  margin: 0px;
-  padding: 3px;
-  line-height: 2em;
-}
-
-.pricing-header {
-  background-color: var(--dark-blue);
-  color: whitesmoke;
-}
-
-.pricing-blue {
-  background-color: var(--light-blue);
-}
