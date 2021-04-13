@@ -1,5 +1,5 @@
 
-#pricing {
+.section-content-wrapper {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -33,8 +33,8 @@
 }
 
 
-@media (max-width : 375px){
-  #pricing {
+@media (max-width : 360px){
+  .section-content-wrapper {
     display: flex;
     flex-direction: column; 
     width:100%;
@@ -43,13 +43,14 @@
 
   .pricing-table {
     border: 0px solid var(--dark-blue);
-    width: auto;
+    width: 90%;
     margin: 1em;
-    text-align: center;
+    text-align: center;    
     
   }
 
-  
-
+ 
 
 }
+
+
